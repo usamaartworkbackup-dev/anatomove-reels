@@ -8,7 +8,7 @@ This file is the instruction set for Claude's scheduled runs that manage the Ana
 - This repo: `usamaartworkbackup-dev/anatomove-reels`, branch `reels`. Public raw link pattern:
   `https://raw.githubusercontent.com/usamaartworkbackup-dev/anatomove-reels/reels/<path>`
 - Google Drive "Reels" folder id `1LzUNnD8dscPbs2kpt2C4xztSYwk5O81w` (Muhammad's own edited reels may also appear there as `Anatomove - <Topic>.mp4` + `Caption - <Topic>.txt` + `Cover - <Topic>.jpg`; Drive links work in Metricool as `https://drive.google.com/uc?export=download&id=<file id>`).
-- Voice: Kokoro `af_heart` (sweet, engaging female voice), speed 1.05. Every reel uses an AI voice, so set `instagramData.isAiGenerated: true`.
+- Voice: Kokoro `af_heart` (sweet, engaging female voice), speed 1.05. Muhammad's choice: never set the Instagram AI label (`instagramData.isAiGenerated: false` on every post) and never mention AI in captions, matching his earlier reels.
 - Style: dark background, bold orange `#FF5C1F` and cyan `#22D3EE`, Inter fonts. Reels 1080x1920, 35–45 s. Carousels 1080x1350, 5–8 slides.
 
 ## Setup at the start of every run
@@ -46,7 +46,7 @@ Anatomove is educational health content. Nothing is made up.
    - Write `caption.txt`: hook line, mechanism in plain words, one real number, honest caveat, tips, red flag, binary comment prompt in caps, send/save CTA, follow CTA, Sources, "Educational content, not medical advice.", 3–5 hashtags ending `#anatomove`.
 7. Carousel (one a week, if budget allows): `carousels/<date>-<slug>/carousel.json` for `pipeline/render_carousel.py`; ideas in the Playbook (myths recap, body by the numbers, sleeper guide, balance test, desk survival guide, red flags, study of the week, Ask a Physio answers). Same accuracy gate.
 8. Commit and push to `reels` (commit message ends with the Co-Authored-By and Claude-Session lines your environment gives you). Confirm each raw link returns HTTP 200 with `curl -sI`.
-9. Schedule in Metricool with `createScheduledPost`: reels at 10:00, carousel at 18:00, Asia/Karachi, `draft: false`, `autoPublish: true`, `media` = raw links (carousel: all slide links in order), `instagramData.type` = `REEL` (or `POST` for a carousel), `isAiGenerated: true` for reels.
+9. Schedule in Metricool with `createScheduledPost`: reels at 10:00, carousel at 18:00, Asia/Karachi, `draft: false`, `autoPublish: true`, `media` = raw links (carousel: all slide links in order), `instagramData.type` = `REEL` (or `POST` for a carousel), `isAiGenerated: false`.
 10. Add each new topic to `topics.md`, commit, push. Then update the Drive file "Anatomove - reel links.txt" (file id `14W0Lc70M4JWF4_iEFhy1JmCxZ23e6ccC`, in the Reels folder) with the Google Drive `update_file` tool: keep everything already there and add one block per new post at the top of the list (date and time, title, raw video link, caption link, Metricool plannerUrl).
 11. Send Muhammad one short message (SendUserMessage): numbers table, 3 takeaways, what is scheduled (dates, titles, plannerUrl links), any topic dropped by the accuracy gate, and 2 story ideas for the week tied to the new reels.
 
