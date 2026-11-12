@@ -50,10 +50,17 @@ Runs every Saturday and prepares the coming Monday–Sunday week: 3 reels and 1 
 8. Commit and push to `reels` (commit message ends with the Co-Authored-By and Claude-Session lines your environment gives you). Confirm each raw link returns HTTP 200 with `curl -sI`.
 9. Schedule in Metricool with `createScheduledPost`: reels at 10:00, carousel at 18:00, Asia/Karachi, `draft: false`, `autoPublish: true`, `media` = raw links (carousel: all slide links in order), `instagramData.type` = `REEL` (or `POST` for a carousel), `isAiGenerated: false`.
 10. Add each new topic to `topics.md`, commit, push. Then update the Drive file "Anatomove - reel links.txt" (file id `14W0Lc70M4JWF4_iEFhy1JmCxZ23e6ccC`, in the Reels folder) with the Google Drive `update_file` tool: keep everything already there and add one block per new post at the top of the list (date and time, title, raw video link, caption link, Metricool plannerUrl).
-11. Send Muhammad one short message (SendUserMessage): numbers table, 3 takeaways, what is scheduled (dates, titles, plannerUrl links), any topic dropped by the accuracy gate, and 2 story ideas for the week tied to the new reels.
+11. Stories: plan next week's stories (Mon–Sun, about one a day) and append them to `stories/plan.md` in the same table format: on reel days at 12:00, share that day's reel with a poll tied to its question; on off days at 12:00 or 19:00, a quiz, myth-or-fact poll, question box, emoji slider or Add Yours from the Playbook ideas, tied to the week's reels. Quiz answers must come from facts already verified for a reel. For each non-share story, render a card with `pipeline/render_story.py` to `stories/<date>-<slug>.jpg` (no emojis in card text) and put its raw link in the Image column. Name the Highlight each story belongs to (Start Here, Sleep, Desk & Sitting, Phone & Neck, Myths, Ask A Physio). Commit and push.
+12. Send Muhammad one short message (SendUserMessage): numbers table, 3 takeaways, what is scheduled (dates, titles, plannerUrl links), any topic dropped by the accuracy gate, and a one-line summary of next week's stories (the daily reminder sends the details each day).
 
 ## Daily log run
 
 1. Clone the repo (no TTS needed).
 2. `getAnalyticsDataByMetrics` for reels of the last 10 days (IGRE02 date-time, IGRE03, IGRE23, IGRE11, IGRE10, IGRE07, IGRE12, IGRE21, IGRE24, IGRE30).
 3. For every reel posted 72–96 hours ago that is not yet in `data/day-test-log.csv`, append one row (age_hours = hours since posting, slug = first 6 words of the caption, weekday of the post date in Asia/Karachi). Commit and push only if a row was added. No message to Muhammad unless something failed.
+
+## Daily story reminder
+
+1. Clone the repo (read only is enough).
+2. Read `stories/plan.md` and pick the rows whose Date is today in Asia/Karachi.
+3. If there are none, send nothing. Otherwise send Muhammad one short SendUserMessage: for each row, the time, what to post, the exact sticker text and options (with the correct answer for quizzes), the image link to save and post, and which Highlight to add it to.
