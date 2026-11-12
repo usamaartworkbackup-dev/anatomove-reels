@@ -1,6 +1,6 @@
 # Posting schedule
 
-All reels post at 10:00 Asia/Karachi. One carousel a week posts at 18:00 on the middle off day.
+Every Saturday, Claude makes and schedules the next week's reels. All reels post at 10:00 Asia/Karachi. One carousel a week posts at 18:00 on the middle off day.
 
 ## Day test (16 Nov – 6 Dec 2026)
 
@@ -12,7 +12,7 @@ All reels post at 10:00 Asia/Karachi. One carousel a week posts at 18:00 on the 
 
 Each reel's numbers are logged about 3.5 days after posting in `data/day-test-log.csv` (same age for every reel).
 
-## Decision (Sunday 13 Dec 2026 run)
+## Decision (Saturday 12 Dec 2026 run)
 
 Rank weekdays by views at that fixed age (reach and skip rate as tie-breakers). Pick the top 3, spread out where possible. If the best and third-best day differ by less than 20%, keep Mon, Wed, Fri. Write the result below and use it from Monday 14 Dec.
 

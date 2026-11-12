@@ -32,11 +32,13 @@ Anatomove is educational health content. Nothing is made up.
 - Include a red-flag line when relevant (numbness, weakness, fainting, pain that doesn't settle → see a physio or doctor).
 - If a claim cannot be verified, drop it. If the topic falls apart, pick another topic. Never publish to fill a slot.
 
-## Weekly run (Sunday)
+## Weekly run (Saturday)
+
+Runs every Saturday and prepares the coming Monday–Sunday week: 3 reels and 1 carousel, all scheduled in Metricool before the run ends.
 
 1. Setup (above).
 2. Report: Metricool `getAnalyticsDataByMetrics` for the last 7 and 30 days. Reels: IGRE01 date, IGRE03 caption, IGRE23 views, IGRE11 reach, IGRE10 likes, IGRE07 comments, IGRE12 saves, IGRE21 shares, IGRE24 avg watch time, IGRE30 skip rate. Account: IGEV01 followers, IGEV43 gained, IGEV44 lost, IGEV30 avg reach per reel. Ignore reels under 72 h old. Best and worst reel and why.
-3. Days: read `SCHEDULE.md` for next week's reel days and carousel day. On the run of Sunday 13 Dec 2026, make the day decision from `data/day-test-log.csv` as SCHEDULE.md describes, write it into SCHEDULE.md, and use it from then on. After that, keep those days.
+3. Days: read `SCHEDULE.md` for next week's reel days and carousel day (the week starting the coming Monday). Call `getScheduledPosts` for that week and skip any reel day that already has a reel. On the run of Saturday 12 Dec 2026, make the day decision from `data/day-test-log.csv` as SCHEDULE.md describes, write it into SCHEDULE.md, and use it from then on. After that, keep those days.
 4. Budget: `getScheduledPosts` for the current and next month; count posts. Never exceed 20 in a calendar month. If tight, drop the carousel first, then reels.
 5. Topics: read `topics.md` and the captions from step 2. Pick 3 new reel topics in the niche: everyday habits and moments, and the body mechanics behind them (sitting, sleeping, phones, walking, lifting, standing, desk work, common sensations). Strong first-3-second hook: a "try this right now" check or a surprising specific number. Part 1 / Part 2 series are welcome. Never repeat a topic.
 6. For each reel:
