@@ -1,0 +1,69 @@
+{
+  "slug": "head-rush",
+  "title": "Head Rush",
+  "voice": "af_heart",
+  "speed": 1.05,
+  "footer": "Sources: StatPearls, Orthostatic Hypotension · NHS, Low blood pressure",
+  "scenes": [
+    {
+      "type": "pool",
+      "mode": "idle",
+      "kicker": "STOOD UP TOO FAST?",
+      "label": "Seeing stars?",
+      "size": 120,
+      "tts": "Ever stood up too fast and saw stars? Here's what's happening inside you.",
+      "say": "Ever stood up too fast and saw stars? Here's what's happening inside you."
+    },
+    {
+      "type": "pool",
+      "mode": "drain",
+      "kicker": "THE SECOND YOU STAND",
+      "label": "~0.5 L",
+      "size": 170,
+      "sub": "of blood drops toward your legs",
+      "tts": "The second you stand, gravity pulls around half a litre of blood down into your legs and belly.",
+      "say": "The second you stand, gravity pulls around half a litre of blood down into your legs and belly."
+    },
+    {
+      "type": "big",
+      "kicker": "FOR A MOMENT",
+      "big": "Less blood",
+      "size": 150,
+      "sub": "reaches your brain",
+      "tts": "So for a moment, your blood pressure dips and less blood reaches your brain. That's the dizzy, dark-vision feeling.",
+      "say": "So for a moment, your blood pressure dips and less blood reaches your brain. That's the dizzy, dark-vision feeling."
+    },
+    {
+      "type": "pool",
+      "mode": "pump",
+      "kicker": "YOUR BODY FIGHTS BACK",
+      "label": "~15 sec",
+      "size": 150,
+      "sub": "to bounce back",
+      "tts": "Normally your body fixes it fast. Your heart speeds up, your blood vessels tighten, and your calf muscles squeeze blood back up. Usually within about fifteen seconds.",
+      "say": "Normally your body fixes it fast. Your heart speeds up, your blood vessels tighten, and your calf muscles squeeze blood back up. Usually within about 15 seconds."
+    },
+    {
+      "type": "big",
+      "kicker": "THE FIX",
+      "big": "Stand in stages",
+      "size": 130,
+      "sub": "pump your ankles first · take it slow in the morning",
+      "tts": "To avoid it, get up in stages, and pump your ankles a few times before you stand. Take extra care first thing in the morning.",
+      "say": "To avoid it, get up in stages, and pump your ankles a few times before you stand. Take extra care first thing in the morning."
+    },
+    {
+      "type": "cta",
+      "big": "Happens to you?",
+      "options": [
+        "NEVER",
+        "SOMETIMES",
+        "OFTEN"
+      ],
+      "sub": "if it keeps happening or you faint, see a doctor",
+      "tts": "Does this happen to you? Never, sometimes, or often? Tell me in the comments. And if it keeps happening, or you faint, see a doctor.",
+      "say": "Does this happen to you? NEVER, SOMETIMES or OFTEN? Tell me in the comments. And if it keeps happening, or you faint, see a doctor.",
+      "pad": 0.8
+    }
+  ]
+}
